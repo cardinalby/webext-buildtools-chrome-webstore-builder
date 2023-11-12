@@ -27,7 +27,10 @@ export class ChromeWebstoreApiFacade {
     protected readonly _logWrapper: LoggerWrapper;
 
     public constructor(token: string, extensionId: string) {
-        this._api = new webstoreApi.WebstoreApi(token);
+        this._api = new webstoreApi.WebstoreApi(token, {
+            maxBodyLength: 2147483648, // 2gb
+            maxContentLength: 2147483648, // 2gb
+        });
         this._extensionId = extensionId;
         this._logWrapper = new LoggerWrapper();
     }
