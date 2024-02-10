@@ -41,7 +41,7 @@ export class ChromeWebstoreBuilder
 
     public setInputManifest(manifest: IManifestObject): this {
         if (!manifest.name || !manifest.version) {
-            throw Error('Invalid manifest object, id and name fields are required');
+            throw Error('Invalid manifest object, version and name fields are required');
         }
         this._inputManifest = manifest;
         return this;
@@ -129,7 +129,7 @@ export class ChromeWebstoreBuilder
                 if (!this._inputManifest) {
                     if (!this._inputZipBuffer) {
                         throw new Error(
-                            'Input manifest is required upload extension. Neither manifest or zip buffer are set'
+                            'Input manifest is required to upload extension. Neither manifest or zip buffer are set'
                         );
                     }
                     this._logWrapper.info('Manifest input is not set, reading from zip...');

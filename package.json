@@ -1,6 +1,6 @@
 {
   "name": "webext-buildtools-chrome-webstore-builder",
-  "version": "1.1.17",
+  "version": "1.1.18",
   "description": "webext-buildtools builder for deploying to Chrome Webstore. Based on chrome-webstore-upload",
   "main": "dist",
   "keywords": [
@@ -30,7 +30,7 @@
   "dependencies": {
     "compare-versions": "^3.6.0",
     "typed-chrome-webstore-api": "^0.4.16",
-    "webext-buildtools-utils": "^1.0.15"
+    "webext-buildtools-utils": "^1.0.16"
   },
   "devDependencies": {
     "webext-buildtools-builder-types": "^1.0.11",
